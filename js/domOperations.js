@@ -1,40 +1,23 @@
 
-function getElem(ID) {
-    return document.getElementById(ID);
+function showResultInDomKvadrat() {
+    let side = document.getElementById("dlinaStoroniKvadrata");
+    let resultObj = document.getElementById("ploschadKvadrata")
+    resultObj.innerHTML = `${squareKvadrat(side)}`;
 }
-
-function correctInput(fieldValue) {
-    debugger;
-    correct = true;
-    if(fieldValue == "" || fieldValue <= 0) {
-        correct = false;
-    }
-    return correct;
+function showResultInDomPriamougolnika() {
+    let firstSide = document.getElementById("pervayaStoronaPriamougolnika");
+    let secondSide = document.getElementById("drugayaStoronaPriamougolnika");
+    let resultObj = document.getElementById("ploschadPriamougolnika")
+    resultObj.innerHTML = `${squareRectangle(firstSide, secondSide)}`;
 }
-
-function calculate(firstID, secondID){
-    let sideValues = {
-        first:getElem(firstID).value,
-        second:getElem(secondID).value
-    };
-    if(correctInput(sideValues.first) && correctInput(sideValues.second)) {
-        return multiply(sideValues);
-    }
-    else {
-        return 'Ошибка! Проверьте значения в полях ввода!';
-    }
+function showResultInDomParalelograma() {
+    let side = document.getElementById("dlinaStoronyParalelograma");
+    let height = document.getElementById("dlinaVisotyParalelograma");
+    let resultObj = document.getElementById("ploschadParalelograma")
+    resultObj.innerHTML = `${squareRectangle(side, height)}`;
 }
-
-
-function squareKvadrat() {
-    getElem("ploschadKvadrata").innerHTML = `${calculate("dlinaStoroniKvadrata", "dlinaStoroniKvadrata")}`;
-}
-function squareRectangle() {
-    getElem("ploschadPriamougolnika").innerHTML = `${calculate("pervayaStoronaPriamougolnika", "drugayaStoronaPriamougolnika")}`;
-}
-function squareParalelogram() {
-    getElem("ploschadParalelograma").innerHTML = `${calculate("dlinaStoronyParalelograma", "dlinaVisotyParalelograma")}`;
-}
-function squareRomb() {
-    getElem("ploschadRomba").innerHTML = `${calculate("dlinaStoronyRomba", "dlinaVisotyRomba")}`;
-}
+function showResultInDomRomba() {
+    let side = document.getElementById("dlinaStoronyParalelograma");
+    let height = document.getElementById("dlinaVisotyParalelograma");
+    let resultObj = document.getElementById("ploschadParalelograma")
+    resultObj.innerHTML = `${squareRectangle(side, height)}`;}
