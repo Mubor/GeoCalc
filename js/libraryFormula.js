@@ -1,15 +1,4 @@
-function squareKvadrat(a) {
-    return a*a;
-}
-
-function squareRectangle(a, b) {
-    return a*b;
-}
-
-function squareParalelogram(a, h) {
-    return a*h;
-}
-
-function squareRomb(a, h) {
-    return a*h;
-}
+let squareKvadrat = (a) => a*a;
+let squareRectangle = (a,b) => a*b;
+let squareParalelogram = (a,h) => a*h;
+let squareRomb = (a,h) => a*h;
